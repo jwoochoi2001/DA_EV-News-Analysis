@@ -1,0 +1,38 @@
+# Kiwi 사용자 사전: 단어<TAB>품사<TAB>점수  (# 은 주석)
+전기차	NNG	5
+LG엔솔	NNP	5
+엔솔	NNP	3
+LG에너지솔루션	NNP	5
+삼성SDI	NNP	5
+K-배터리	NNP	5
+마이홈차저	NNP	5
+V2G	NNP	5
+기후부	NNP	5
+폐배터리	NNG	5
+배터리셀	NNG	5
+원통형	NNG	5
+양극재	NNG	5
+휘발유차	NNG	5
+경유차	NNG	5
+기름차	NNG	5
+완성차업계	NNG	5
+충전요금	NNG	5
+공공충전기	NNG	5
+급속충전	NNG	5
+연비규제	NNG	5
+생산세액공제	NNG	5
+회생전력	NNG	5
+녹색전환	NNG	5
+퇴직연금	NNG	5
+의무화	NNG	3
+가정용	NNG	3
+# --- 전기차 동의어(synonyms.csv 의 한국어 표현) ---
+전기자동차	NNG	5
+전기승용차	NNG	5
+배터리전기차	NNG	5
+이차전지	NNG	5
+가솔린	NNG	5
+# --- 기업명 표기 변형 ---
+현대자동차그룹	NNP	5
+현대차그룹	NNP	5
+현대차	NNP	5

@@ -1,0 +1,52 @@
+lang,variant,canonical,group,note
+ko,전기자동차,전기차,전기차,데이터에 없음(선제 등록)
+ko,전기 자동차,전기차,전기차,데이터에 없음(선제 등록)
+ko,전기승용차,전기차,전기차,데이터에 없음(선제 등록)
+ko,배터리전기차,전기차,전기차,데이터에 없음(선제 등록)
+ko,이브이,전기차,전기차,데이터에 없음(선제 등록)
+ko,BEV,전기차,전기차,데이터에 없음(선제 등록)
+ko,차량,자동차,자동차,
+ko,가솔린,휘발유,휘발유,데이터에 없음(선제 등록)
+ko,이차전지,배터리,배터리,데이터에 없음(선제 등록)
+ko,2차전지,배터리,배터리,데이터에 없음(선제 등록)
+en,electric vehicles,electric_vehicle,electric vehicle,
+en,electric vehicle,electric_vehicle,electric vehicle,
+en,electric cars,electric_vehicle,electric vehicle,
+en,electric car,electric_vehicle,electric vehicle,
+en,electric automobiles,electric_vehicle,electric vehicle,데이터에 없음(선제 등록)
+en,electric automobile,electric_vehicle,electric vehicle,데이터에 없음(선제 등록)
+en,battery electric vehicles,electric_vehicle,electric vehicle,데이터에 없음(선제 등록)
+en,battery electric vehicle,electric_vehicle,electric vehicle,데이터에 없음(선제 등록)
+en,e-vehicles,electric_vehicle,electric vehicle,데이터에 없음(선제 등록)
+en,e-vehicle,electric_vehicle,electric vehicle,데이터에 없음(선제 등록)
+en,e-cars,electric_vehicle,electric vehicle,데이터에 없음(선제 등록)
+en,e-car,electric_vehicle,electric vehicle,데이터에 없음(선제 등록)
+en,bevs,electric_vehicle,electric vehicle,데이터에 없음(선제 등록)
+en,bev,electric_vehicle,electric vehicle,데이터에 없음(선제 등록)
+en,evs,electric_vehicle,electric vehicle,
+en,ev,electric_vehicle,electric vehicle,
+en,petrol,gasoline,gasoline,
+en,gas,gasoline,gasoline,"gas prices 등 연료 의미로만 등장하는 것 확인"
+en,automakers,automaker,automaker,
+en,carmakers,automaker,automaker,
+en,carmaker,automaker,automaker,
+en,batteries,battery,battery,
+en,chargers,charger,charger,
+en,tax credits,tax_credit,tax credit,
+en,tax credit,tax_credit,tax credit,
+en,hybrids,hybrid,hybrid,
+en,cars,vehicle,vehicle,
+en,car,vehicle,vehicle,
+en,vehicles,vehicle,vehicle,
+ko,현대차그룹,현대자동차그룹,현대자동차그룹,
+ko,현대차,현대자동차,현대자동차,
+ko,LG엔솔,LG에너지솔루션,LG에너지솔루션,
+ko,美,미국 ,미국,한자 약칭 → 한글 (뒤 공백은 붙은 단어와 분리용)
+ko,中,중국 ,중국,
+ko,日,일본 ,일본,
+ko,韓,한국 ,한국,
+en,u.s.,united_states,united states,
+en,united states,united_states,united states,
+en,america,united_states,united states,
+en,united kingdom,uk,uk,
+en,britain,uk,uk,

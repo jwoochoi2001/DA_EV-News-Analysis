@@ -1,0 +1,154 @@
+{
+ "7": {
+  "domain": "v.daum.net",
+  "url": "https://v.daum.net/v/20260913113323037",
+  "name": "Daum | 중도일보"
+ },
+ "8": {
+  "domain": "news.jtbc.co.kr",
+  "url": "https://news.jtbc.co.kr/article/NB12320353",
+  "name": "JTBC 뉴스"
+ },
+ "18": {
+  "domain": "theguru.co.kr",
+  "url": "https://theguru.co.kr/news/article.html?no=107630",
+  "name": null
+ },
+ "32": {
+  "domain": "newstree.kr",
+  "url": "https://www.newstree.kr/newsView/ntr202609290003",
+  "name": "뉴스;트리(주)"
+ },
+ "75": {
+  "domain": "newstree.kr",
+  "url": "https://www.newstree.kr/newsView/ntr202610010005",
+  "name": "뉴스;트리(주)"
+ },
+ "78": {
+  "domain": "v.daum.net",
+  "url": "https://v.daum.net/v/20260928070215410?f=p",
+  "name": "Daum | 연합뉴스"
+ },
+ "81": {
+  "domain": "news.einfomax.co.kr",
+  "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4436586",
+  "name": "연합인포맥스"
+ },
+ "85": {
+  "domain": "zdnet.co.kr",
+  "url": "https://zdnet.co.kr/view/?no=20260929095414",
+  "name": null
+ },
+ "89": {
+  "domain": "news.einfomax.co.kr",
+  "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4437247",
+  "name": "연합인포맥스"
+ },
+ "92": {
+  "domain": "m-i.kr",
+  "url": "https://www.m-i.kr/news/articleView.html?idxno=2001593",
+  "name": "매일일보"
+ },
+ "102": {
+  "domain": "wsj.com",
+  "url": null,
+  "name": null,
+  "err": "HTTP Error 401: HTTP Forbidden"
+ },
+ "121": {
+  "domain": "carnewschina.com",
+  "url": "https://carnewschina.com/2026/09/02/china-pushes-global-solid-state-ev-standard-as-domestic-pilot-lines-scale/",
+  "name": "CarNewsChina.com"
+ },
+ "128": {
+  "domain": "nbcchicago.com",
+  "url": "https://www.nbcchicago.com/news/local/ev-fire-damages-five-vehicles-in-suburban-high-school-parking-garage/3995382/",
+  "name": "NBC Chicago"
+ },
+ "129": {
+  "domain": "EVChargingStations.com",
+  "url": "https://evchargingstations.com/guides/electric-car-charger-lifespan/",
+  "name": "EV Charging Stations With Tom Moloughney"
+ },
+ "136": {
+  "domain": "vtcng.com",
+  "url": null,
+  "name": null,
+  "err": "HTTP Error 429: Too Many Requests"
+ },
+ "141": {
+  "domain": "ky3.com",
+  "url": "https://www.ky3.com/2026/09/24/how-fire-crews-attack-electric-vehicle-fires/",
+  "name": "https://www.ky3.com"
+ },
+ "144": {
+  "domain": "thetruthaboutcars.com",
+  "url": null,
+  "name": null,
+  "err": "HTTP Error 406: Forbidden"
+ },
+ "145": {
+  "domain": "NYC.gov",
+  "url": "https://www.nyc.gov/site/dcas/news/027-26/city-new-york-fleet-electrification-advancements-latest-clean-fleet-update-",
+  "name": "The official website of the City of New York"
+ },
+ "149": {
+  "domain": "columbiaspectator.com",
+  "url": "https://www.columbiaspectator.com/city-news/2026/09/25/manhattan-valley-to-receive-2-new-ev-charging-spots-raising-questions-on-curbside-space-use/",
+  "name": "Columbia Daily Spectator"
+ },
+ "159": {
+  "domain": "CBS17.com",
+  "url": null,
+  "name": null,
+  "err": "HTTP Error 403: Forbidden"
+ },
+ "160": {
+  "domain": "Euronews.com",
+  "url": "https://www.euronews.com/2026/09/03/car-sales-in-portugal-surge-in-august-as-electric-vehicles-top-25-of-market",
+  "name": "euronews"
+ },
+ "162": {
+  "domain": "cnbc.com",
+  "url": "https://www.cnbc.com/2026/09/26/trump-fuel-economy-cafe-standards.html",
+  "name": "CNBC"
+ },
+ "164": {
+  "domain": "markets.businessinsider.com",
+  "url": "https://markets.businessinsider.com/news/stocks/nick-mayer-ford-mayfield-announces-expansion-of-hybrid-and-electric-vehicle-inventory-1036585144",
+  "name": "markets.businessinsider.com"
+ },
+ "168": {
+  "domain": "Motor1.com",
+  "url": "https://www.motor1.com/news/809088/vw-ev-orders-beating-gas-cars-germany/",
+  "name": null
+ },
+ "177": {
+  "domain": "cbs19.tv",
+  "url": null,
+  "name": null,
+  "err": "HTTP Error 403: Forbidden"
+ },
+ "182": {
+  "domain": "kasu.org",
+  "url": "https://www.kasu.org/business-economy/2026-09-30/one-year-after-the-end-of-the-ev-tax-credit-is-the-future-still-electric",
+  "name": "KASU"
+ },
+ "184": {
+  "domain": "fox43.com",
+  "url": null,
+  "name": null,
+  "err": "HTTP Error 403: Forbidden"
+ },
+ "188": {
+  "domain": "vcreporter.com",
+  "url": "https://www.vcreporter.com/news/quick-green-tip-drive-electric-month-and-the-mile-not-driven/article_e48ca782-299b-411e-ad46-e50693f35ead.html",
+  "name": "VC Reporter | Times Media Group - News, Culture, Arts and Opinion"
+ },
+ "190": {
+  "domain": "MLive.com",
+  "url": null,
+  "name": null,
+  "err": "HTTP Error 403: Forbidden"
+ }
+}
