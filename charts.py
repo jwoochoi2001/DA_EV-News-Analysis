@@ -4,8 +4,8 @@ from wordcloud import WordCloud
 from collections import Counter
 import pandas as pd
 from top_words import d, ko_nouns, en_words
-FONT = r'C:\Windows\Fonts\malgun.ttf'
-plt.rcParams['font.family'] = 'Malgun Gothic'; plt.rcParams['axes.unicode_minus'] = False
+from fonts import setup_matplotlib
+FONT = setup_matplotlib()
 data = {}
 for lang, f in (('ko', ko_nouns), ('en', en_words)):
     tot, doc = Counter(), Counter()

@@ -1,6 +1,6 @@
 import numpy as np, pandas as pd, matplotlib
 matplotlib.use('Agg'); import matplotlib.pyplot as plt
-plt.rcParams['font.family'] = 'Malgun Gothic'; plt.rcParams['axes.unicode_minus'] = False
+from fonts import setup_matplotlib; setup_matplotlib()
 p = pd.read_csv('title_pca.csv'); u = pd.read_csv('title_umap.csv')
 fig, ax = plt.subplots(1, 2, figsize=(14, 6))
 for a, df, x, y, t in ((ax[0], p, 'PC1', 'PC2', 'PCA (설명 분산 PC1 15.1% + PC2 7.5% = 22.6%)'), (ax[1], u, 'umap1', 'umap2', 'UMAP (cosine, n_neighbors=15, min_dist=0.1)')):

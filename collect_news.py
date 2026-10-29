@@ -28,7 +28,7 @@ for lang, kw, loc in CONFIGS:
                      "링크": it.findtext("link"), "수집시각": collected_at})
         n += 1
         if n >= MAX: break
-with open("ev_news.csv", "w", newline="", encoding="utf-8-sig") as f:
+with open("ev_news_raw.csv", "w", newline="", encoding="utf-8-sig") as f:
     w = csv.DictWriter(f, fieldnames=["언어","제목","발행일","매체","링크","수집시각"])
     w.writeheader(); w.writerows(rows)
 for lang, _, _ in CONFIGS:

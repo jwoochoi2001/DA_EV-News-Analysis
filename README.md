@@ -446,17 +446,21 @@ UMAP은 `random_state`에 따라 모양이 달라지고 축의 크기나 군집 
 |---|---|
 | `collect_news.py` | RSS 수집 |
 | `clean_news.py` | 정제(HTML·공백, 매체명 접미사, 중복) |
-| `resolve_media.py`, `resolve2.py`, `media_resolved.json` | 도메인으로 적힌 매체명 확인 |
+| `resolve_media.py`, `resolve2.py`, `media_resolved.json` | 도메인으로 적힌 매체명을 기사에서 확인한 탐색 기록 |
+| `media_map.csv`, `standardize_media.py` | 확인한 매체명 매핑(도메인 또는 링크 → 매체명)과 적용 스크립트, 못 채운 매체는 `media_unmapped.csv`에 기록 |
 | `user_dict.txt` | Kiwi 사용자 사전 |
 | `synonyms.csv` | 동의어 사전 |
 | `normalize.py` | 동의어 정규화와 토큰화 |
+| `build_outputs.py` | 정규화·검수 파일(`ev_news_norm.csv`, `ev_news_review.csv`) 생성 |
 | `top_words.py` | 단어 빈도 집계 |
-| `charts.py` | 막대그래프, 워드클라우드 |
+| `charts.py`, `fonts.py` | 막대그래프, 워드클라우드, 운영체제별 한글 폰트 탐색 |
+| `word_articles.py`, `search.py` | 단어별 기사 목록, 임베딩 의미 검색 |
+| `run_all.py`, `requirements.txt` | 전체 파이프라인 실행, 라이브러리 목록 |
 | `embed.py` | 문장 임베딩 |
 | `pca_plot.py`, `umap_compare.py`, `static_plots.py` | PCA·UMAP 시각화 |
-| `ev_news_raw.csv` | 수집 직후 원본(200건) |
+| `ev_news_raw.csv` | 수집 직후 원본(200건). 파이프라인의 시작점 |
 | `ev_news_before_media.csv` | 매체명 보완 직전 상태(198건) |
-| `ev_news.csv` | 정리된 최종 데이터(198건) |
+| `ev_news.csv` | 정리된 최종 데이터(198건, 파이프라인이 생성) |
 | `ev_news_norm.csv` | 정규화 제목과 토큰 포함 |
 | `ev_news_review.csv` | 원본·정리·정규화 제목 검수용 |
 | `word_articles.csv` | 단어별 기사 목록 |
@@ -465,22 +469,50 @@ UMAP은 `random_state`에 따라 모양이 달라지고 축의 크기나 군집 
 | `top_words_bar.png`, `wordcloud_ko.png`, `wordcloud_en.png`, `pca_vs_umap.png` | 그림 |
 | `title_pca.html`, `pca_vs_umap.html` | 대화형 산점도 |
 
-## 15. 실행 환경과 재현 방법
+## 15. 설치와 실행 (깃 저장소만으로 재현)
 
-- Python 3.14, Windows 11
-- 주요 라이브러리: `pandas`, `scikit-learn`, `kiwipiepy`, `matplotlib`, `wordcloud`, `sentence-transformers`(`torch` CPU), `umap-learn`, `plotly`
-- Windows에서 `torch`가 Visual C++ 런타임 오류로 로드되지 않아 `msvc-runtime`(PyPI)을 설치해 해결했습니다. 공식 VC++ 재배포 패키지를 설치해도 됩니다.
-- 모델은 처음 실행할 때 Hugging Face에서 약 470MB를 내려받습니다.
+### 15.1 준비
+
+- Python 3.10 이상 (테스트: Python 3.14, Windows 11)
+- 인터넷 연결: 라이브러리 설치와 임베딩 모델 다운로드(처음 한 번, 약 470MB)에 필요합니다.
+- 한글 폰트: 그래프와 워드클라우드에 필요합니다. `fonts.py`가 `Malgun Gothic`(Windows), `AppleGothic`(macOS), `NanumGothic`, `Noto Sans CJK KR`(Linux) 중 설치된 것을 자동으로 찾습니다. 없으면 경고가 나오고 그림의 한글이 깨집니다. Linux에서는 `sudo apt install fonts-nanum` 등으로 설치하세요.
 
 ```bash
-python collect_news.py     # 수집
-python clean_news.py       # 정제 (ev_news_raw.csv 필요)
-python top_words.py        # 단어 빈도
-python charts.py           # 막대그래프, 워드클라우드
-python embed.py            # 임베딩
-python pca_plot.py         # PCA
-python umap_compare.py     # PCA vs UMAP
-python static_plots.py     # README용 정적 그림
+git clone https://github.com/jwoochoi2001/DA_EV-News-Analysis.git
+cd DA_EV-News-Analysis
+python -m venv .venv
+# Windows: .venv\Scriptsctivate     macOS/Linux: source .venv/bin/activate
+pip install -r requirements.txt
 ```
 
-수집은 실행 시점의 기사를 가져오므로 결과가 이 문서의 숫자와 달라질 수 있습니다. 문서의 모든 수치는 2026-10-01에 수집한 데이터 기준입니다.
+`torch`는 기본 설치 시 용량이 큽니다. GPU가 필요 없으면 CPU 버전을 먼저 설치하세요.
+
+```bash
+pip install torch --index-url https://download.pytorch.org/whl/cpu
+pip install -r requirements.txt
+```
+
+Windows에서 `torch` 로드 시 `Microsoft Visual C++ Redistributable is not installed` 오류가 나면 [VC++ 재배포 패키지](https://aka.ms/vc14/vc_redist.x64.exe)를 설치하세요. (이 프로젝트를 만들 때는 대신 `pip install msvc-runtime`으로 해결했습니다.)
+
+### 15.2 실행
+
+```bash
+python run_all.py             # 저장소에 있는 수집 원본(ev_news_raw.csv)부터 전 과정을 다시 실행
+python run_all.py --collect   # Google 뉴스에서 새로 수집한 뒤 전 과정을 실행
+```
+
+- 기본 실행은 수집 시점의 원본 200건(2026-10-01)을 쓰므로, 이 문서의 숫자와 같은 결과가 나옵니다. 저장소의 `ev_news.csv`, `ev_news_norm.csv`, `ev_news_review.csv`, 임베딩, 좌표 파일이 다시 만들어도 같은 값인 것을 확인했습니다.
+- `--collect`는 실행 시점의 최신 기사를 가져오므로 결과가 이 문서와 달라집니다. 이때 도메인으로 적힌 새 매체는 `media_map.csv`에 없으면 그대로 남고 `media_unmapped.csv`에 기록됩니다. `python standardize_media.py --resolve`로 기사에 접근해 매체명 제안값을 볼 수 있고, 확인한 값을 `media_map.csv`에 직접 추가하면 됩니다.
+- 대화형 HTML 산점도는 실행할 때마다 내부 ID가 바뀌어 깃에서 변경된 파일로 보입니다. 내용은 같습니다.
+
+### 15.3 단계별 실행
+
+| 하고 싶은 것 | 명령 |
+|---|---|
+| 정제만 | `python clean_news.py` → `python standardize_media.py` |
+| 정규화 파일 만들기 | `python build_outputs.py` |
+| 상위 단어 보기 | `python top_words.py` |
+| 단어가 나온 기사 | `python word_articles.py 미국 배터리` (정규화된 단어로 입력, 기본값은 현대자동차·미국·배터리·출시) |
+| 의미 검색 | `python search.py "전기차 충전 비용" 10` |
+| 동의어·사용자 사전 수정 | `synonyms.csv`, `user_dict.txt`를 고친 뒤 `python build_outputs.py` |
+
