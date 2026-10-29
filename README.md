@@ -481,7 +481,7 @@ UMAP은 `random_state`에 따라 모양이 달라지고 축의 크기나 군집 
 git clone https://github.com/jwoochoi2001/DA_EV-News-Analysis.git
 cd DA_EV-News-Analysis
 python -m venv .venv
-# Windows: .venv\Scriptsctivate     macOS/Linux: source .venv/bin/activate
+# Windows: .venv\Scripts\activate     macOS/Linux: source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
